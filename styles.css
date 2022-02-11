@@ -37,7 +37,6 @@ button:hover {
     display: flex;
     margin: 100px 0px;
     padding: 0 5%;
-    /* border: hotpink solid; */
     align-items: center;
     justify-content: space-between;
     gap: 1em;
@@ -52,7 +51,6 @@ button:hover {
     margin: 0;
     padding: 0;
     gap: 1em;
-    /* border: lavender solid; */
 }
 
 .hero-main {
@@ -77,8 +75,7 @@ button:hover {
 
 .goat{
     max-width: auto;
-    max-height: 320px;
-    /* border: lawngreen solid; */
+    max-height: 320px;  
 }
 
 .flex-container2 {
@@ -86,7 +83,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     background-color: #F9FAF8;
-    /* border: hotpink solid; */
     padding: 4em 0;
 }
 
@@ -140,6 +136,7 @@ h1 {
 .attribution {
     font-weight: bold;
     align-self: flex-end;
+    color: #1F2937;
 }
 
 .flex-container5 {
@@ -150,7 +147,7 @@ h1 {
   justify-content: center;
 }
 
-.flex-container5 h2, p {
+.col1 h2, .col1 p{
     margin: 0;
     color: #F9FAF8
 }
