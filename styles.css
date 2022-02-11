@@ -6,7 +6,7 @@ body {
 .nav {
     list-style-type: none;
     margin: 0;
-    padding: 0 5%;
+    padding: 0.25em 5%;
     display: flex;
     gap: 24px;
     justify-content: space-between;
@@ -16,6 +16,14 @@ body {
 .nav li {
     display: inline;
     color: #F9FAF8;
+}
+
+a:hover {
+    color: #3882F6;
+}
+
+button:hover {
+    color: #1F2937;
 }
 
 .push {
@@ -43,7 +51,7 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    gap: 12px;
+    gap: 1em;
     /* border: lavender solid; */
 }
 
@@ -69,7 +77,111 @@ body {
 
 .goat{
     max-width: auto;
-    max-height: 256px;
+    max-height: 320px;
     /* border: lawngreen solid; */
 }
 
+.flex-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F9FAF8;
+    /* border: hotpink solid; */
+    padding: 4em 0;
+}
+
+h1 {
+    padding-bottom: 1em;
+}
+
+.flex-container3 {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 3em;
+ 
+}
+
+.card {
+    max-width: 196px;
+    height: auto;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+ max-width: 196px;
+ height: auto;
+ border-radius: 8px;
+ border: #1F2937 solid;
+}
+
+.flex-container4 {
+    background-color: #E5E7EB;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 4em;
+}
+
+.quote {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    max-width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.flex-container5 {
+  background-color: #F9FAF8;
+
+  padding: 4em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container5 h2, p {
+    margin: 0;
+    color: #F9FAF8
+}
+
+h2 {
+    padding-bottom: 4px;
+}
+
+.flex-container6 {
+    background-color: #3882F6;
+    padding: 4em;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8em;
+    
+}
+
+.submit {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-weight: bolder;
+    border: #F9FAF8 solid;
+    border-radius: 8px;
+    padding: 8px 36px;
+   
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: #F9FAF8;
+    padding: 2em 0;
+}
