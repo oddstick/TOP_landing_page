@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #1F2937;
     font-family: roboto, sans-serif;
@@ -10,18 +14,87 @@ body {
     display: flex;
     gap: 24px;
     justify-content: space-between;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .nav li {
     display: inline;
     color: #F9FAF8;
+    cursor: pointer;
+}
+
+/* Hide the link that should open and close the topnav on small screens -adapted from W3S*/
+.nav .icon {
+    display: none;
 }
 
 a:hover {
     color: #3882F6;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptextbutton {
+    visibility: hidden;
+    width: 120px;
+    background-color: #1F2937;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+  }
+
+  .tooltip .tooltiptextbutton::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #1F2937 transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptextbutton {
+    visibility: visible;
+  }
+ 
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #3882F6;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+  }
+
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #3882F6 transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+ 
 button:hover {
     color: #1F2937;
 }
@@ -31,6 +104,16 @@ button:hover {
     font-weight: bolder;
     color: #F9FAF8;
     margin-right: auto;
+    cursor: pointer;
+}
+
+.push a {
+    text-decoration: none;
+    color: #F9FAF8;
+}
+
+.push a:hover {
+    color: #3882F6;
 }
 
 .flex-container1 {
@@ -63,6 +146,26 @@ button:hover {
     color: #E5E7EB;
 }
 
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+
 .sign-up {
     background-color: #3882F6;
     color: #F9FAF8;
@@ -84,6 +187,7 @@ button:hover {
     align-items: center;
     background-color: #F9FAF8;
     padding: 4em 0;
+    text-align: center;
 }
 
 h1 {
@@ -115,6 +219,10 @@ h1 {
  border: #1F2937 solid;
 }
 
+.zoom:hover {
+    transform: scale(1.1); /*110% zoom*/
+}
+
 .flex-container4 {
     background-color: #E5E7EB;
     padding: 4em 0;
@@ -131,6 +239,7 @@ h1 {
     max-width: 90%;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .attribution {
@@ -181,4 +290,57 @@ footer {
     justify-content: center;
     color: #F9FAF8;
     padding: 2em 0;
+}
+
+@media screen and (max-width: 768px) {   
+    .flex-container1,
+    .flex-container2,
+    .flex-container3,
+    .flex-container4,
+    .flex-container5,    
+    .flex-container6 {
+        flex-direction: column;
+        gap: 4em;
+    }   
+    
+    .flex-container6 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .flex-container6 h2 {
+        margin-bottom: 1em;
+    }
+    
+
+    /* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). 
+    Show the link that contains should open and close the topnav (.icon) -adapted from W3S*/
+    .nav li:not(:first-child, :last-child) {
+        display: none;
+    }
+    .nav a.icon {
+        float: right;
+        display: block;
+        color: white;        
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .nav.responsive {
+        position: relative;
+        flex-direction: column;
+        align-items: end;        
+    }
+    .nav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    .nav.responsive li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
 }
